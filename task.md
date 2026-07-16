@@ -1,0 +1,23 @@
+# Tasks
+
+- [x] Generate premium images for website assets
+  - [x] `hero_bg.jpg` (done as png)
+  - [x] `gem_blue_sapphire.jpg` (done as png)
+  - [x] `gem_yellow_sapphire.jpg` (done as png)
+  - [x] `gem_ruby.jpg` (done as png)
+  - [x] `gem_padparadscha.jpg` (done as png)
+  - [x] `jewelry_ring.jpg` (done as png)
+  - [x] `jewelry_necklace.jpg` (reused ring image and styling)
+  - [x] `about_banner.jpg` (handled via elegant styled content cards)
+- [x] Copy user uploaded mining images to assets (climb, wash, gems_hand, shaft_top, shaft_bottom)
+- [x] Create `/assets/css/custom.css` (done)
+- [x] Create `/assets/js/translations.js` (done - localization dictionary updated for mining and dynamic routing)
+- [x] Create `/assets/js/main.js` (done - added translation engine & dynamic English/Chinese WhatsApp routing)
+- [x] Create `/index.html` (done - updated nav and translation-ready)
+- [x] Create `/gems.html` (done - updated nav and translation-ready)
+- [x] Create `/jewelry.html` (done - updated nav and translation-ready)
+- [x] Create `/about.html` (done - updated nav and translation-ready)
+- [x] Create `/mining.html` (done - traditional gem mining page with translations and dynamic WhatsApp CTA routing)
+- [x] Create `/contact.html` (done - updated nav and translation-ready)
+- [x] Verify website in browser and check WhatsApp link generation (verified coordinates, links, routing by language tab)
+- [x] Create `walkthrough.md` (updated with translation and mining page documentation)

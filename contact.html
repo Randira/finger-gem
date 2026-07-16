@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Finger Gems & Jewelry</title>
+  <meta name="description" content="Get in touch with Finger Gems & Jewelry. Contact details for purchasing authentic Ceylon sapphire gems and custom gold jewelry. Mobile and email support.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#d4af37',
+              dark: '#b8932c',
+              light: '#f3e5ab',
+            },
+            luxury: '#0a0a0b',
+            luxuryDark: '#050506',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-luxury text-gray-200">
+
+  <!-- Top Announcement Bar -->
+  <div data-i18n="top_announcement" class="bg-gradient-to-r from-zinc-950 via-gold-dark/20 to-zinc-950 text-center py-2 px-4 border-b border-gold/10 text-xs tracking-wider text-gold-light">
+    AUTHENTIC NATURAL CEYLON GEMSTONES - WORLDWIDE INSURED SHIPPING & CERTIFICATION
+  </div>
+
+  <!-- Header / Navigation -->
+  <header id="main-header" class="fixed top-10 left-0 w-full z-40 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/logo.jpg" alt="Finger Gems Logo" class="h-10 w-10 object-contain rounded-full border border-gold/30 group-hover:border-gold transition-all duration-300">
+        <div class="flex flex-col">
+          <span class="text-sm font-semibold tracking-[0.25em] text-white uppercase font-serif">Finger Gems</span>
+          <span data-i18n="nav_tagline" class="text-[9px] tracking-[0.4em] text-gold-light uppercase">& Jewelry</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs tracking-widest uppercase font-medium">
+        <a href="index.html" data-i18n="nav_home" class="text-gray-400 hover:text-gold transition-all duration-300">Home</a>
+        <a href="gems.html" data-i18n="nav_gems" class="text-gray-400 hover:text-gold transition-all duration-300">Gems Catalog</a>
+        <a href="jewelry.html" data-i18n="nav_jewelry" class="text-gray-400 hover:text-gold transition-all duration-300">Bespoke Jewelry</a>
+        <a href="about.html" data-i18n="nav_heritage" class="text-gray-400 hover:text-gold transition-all duration-300">Ceylon Heritage</a>
+        <a href="mining.html" data-i18n="nav_mining" class="text-gray-400 hover:text-gold transition-all duration-300">Gem Mining</a>
+        <a href="contact.html" data-i18n="nav_contact" class="text-gold transition-all duration-300 hover:text-white relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-gold">Contact Us</a>
+      </nav>
+
+      <!-- Desktop Contact/Inquire CTA & Language Switcher -->
+      <div class="hidden md:flex items-center gap-6">
+        <!-- Language Switcher -->
+        <div class="flex items-center gap-2.5 text-xs tracking-widest uppercase font-semibold border-r border-white/10 pr-6">
+          <button data-lang="en" class="lang-select-btn text-gold font-bold hover:text-white transition-all duration-300">EN</button>
+          <span class="text-white/20">|</span>
+          <button data-lang="zh" class="lang-select-btn text-gray-400 hover:text-white transition-all duration-300">中文</button>
+        </div>
+        
+        <a href="https://wa.me/94770615088" target="_blank" data-i18n="nav_inquire_btn" class="px-5 py-2.5 bg-gold-gradient text-black font-semibold text-xs tracking-widest uppercase rounded hover:bg-gold-gradient-hover transition-all duration-300 btn-gold shadow-lg shadow-gold/10">
+          WhatsApp Us
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-white hover:text-gold transition-all duration-300" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-50 flex flex-col justify-center items-center hidden">
+    <button id="close-menu" class="absolute top-8 right-6 text-white hover:text-gold text-2xl" onclick="document.getElementById('mobile-menu').classList.add('hidden'); document.body.classList.remove('overflow-hidden');">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img src="assets/logo.jpg" alt="Finger Gems Logo" class="h-16 w-16 object-contain rounded-full border border-gold/30 mb-8">
+    <nav class="flex flex-col gap-6 text-center text-lg tracking-widest uppercase mb-8">
+      <a href="index.html" data-i18n="nav_home" class="text-gray-300 hover:text-gold">Home</a>
+      <a href="gems.html" data-i18n="nav_gems" class="text-gray-300 hover:text-gold">Gems Catalog</a>
+      <a href="jewelry.html" data-i18n="nav_jewelry" class="text-gray-300 hover:text-gold">Bespoke Jewelry</a>
+      <a href="about.html" data-i18n="nav_heritage" class="text-gray-300 hover:text-gold">Ceylon Heritage</a>
+      <a href="mining.html" data-i18n="nav_mining" class="text-gray-300 hover:text-gold">Gem Mining</a>
+      <a href="contact.html" data-i18n="nav_contact" class="text-gold">Contact Us</a>
+    </nav>
+    
+    <!-- Mobile Language Selector -->
+    <div class="flex items-center gap-4 text-xs tracking-widest uppercase font-semibold border-t border-white/10 pt-6 mb-8 w-40 justify-center">
+      <button data-lang="en" class="lang-select-btn text-gold font-bold hover:text-white transition-all duration-300">English</button>
+      <span class="text-white/20">|</span>
+      <button data-lang="zh" class="lang-select-btn text-gray-400 hover:text-white transition-all duration-300">中文</button>
+    </div>
+
+    <a href="https://wa.me/94770615088" target="_blank" data-i18n="nav_inquire_btn" class="px-8 py-3.5 bg-gold-gradient text-black font-semibold text-sm tracking-widest uppercase rounded btn-gold">
+      WhatsApp Us
+    </a>
+  </div>
+
+  <!-- Page Banner -->
+  <section class="relative pt-44 pb-20 bg-luxuryDark overflow-hidden border-b border-white/[0.03]">
+    <div class="absolute left-0 bottom-0 w-80 h-80 bg-gold/5 rounded-full filter blur-[80px]"></div>
+    <div class="relative max-w-7xl mx-auto px-6 text-center reveal">
+      <span data-i18n="contact_header_tag" class="text-xs tracking-[0.4em] text-gold uppercase mb-3 block font-medium">Get In Touch</span>
+      <h1 data-i18n="contact_header_title" class="text-4xl md:text-6xl font-serif text-white mb-6">Contact Finger Gems</h1>
+      <div class="h-[1px] w-20 bg-gold mx-auto mb-6"></div>
+      <p data-i18n="contact_header_desc" class="max-w-xl mx-auto text-gray-400 font-light text-xs md:text-sm leading-relaxed">
+        Have questions about Ceylon gemstones or want to design a ring? Reach out via WhatsApp, phone, email, or fill out the contact form below.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Info & Contact Form Grid -->
+  <section class="py-24 bg-luxury relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        
+        <!-- Left: Details & Socials (5 cols) -->
+        <div class="lg:col-span-5 space-y-10 reveal">
+          <div>
+            <span data-i18n="contact_info_tag" class="text-xs tracking-[0.4em] text-gold uppercase mb-2 block font-medium">Showroom & Sourcing</span>
+            <h2 data-i18n="contact_info_title" class="text-3xl font-serif text-white mb-6">Connect With Us</h2>
+            <p data-i18n="contact_info_desc" class="text-xs text-gray-400 font-light leading-relaxed">
+              We respond promptly to all gemstone price inquiries and design quotes. Direct WhatsApp messaging is our primary channel for real-time photo sharing and consultations.
+            </p>
+          </div>
+
+          <!-- Info Cards -->
+          <div class="space-y-6">
+            <!-- Phone Card -->
+            <div class="flex items-start gap-4 p-5 glass-card border border-white/5 rounded-lg">
+              <div class="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center rounded-full text-base shrink-0">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <span data-i18n="contact_lbl_phone" class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1">Phone Numbers</span>
+                <a href="tel:+94770615088" class="text-sm font-medium text-white hover:text-gold block transition-colors duration-300 font-semibold">+94 770615088</a>
+                <a href="tel:+94766640401" class="text-sm font-medium text-white hover:text-gold block transition-colors duration-300 font-semibold">+94 766640401</a>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="flex items-start gap-4 p-5 glass-card border border-white/5 rounded-lg">
+              <div class="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center rounded-full text-base shrink-0">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <span data-i18n="contact_lbl_email" class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1">Email Address</span>
+                <a href="mailto:fingergems@163.com" class="text-sm font-medium text-white hover:text-gold block transition-colors duration-300 font-semibold">fingergems@163.com</a>
+              </div>
+            </div>
+
+            <!-- Address Card -->
+            <div class="flex items-start gap-4 p-5 glass-card border border-white/5 rounded-lg">
+              <div class="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center rounded-full text-base shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span data-i18n="contact_lbl_showroom" class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1">Showroom Location</span>
+                <span data-i18n="footer_address" class="text-sm font-semibold text-white">62/B Light House Street, Galle Fort, Galle</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social media handles -->
+          <div class="space-y-4">
+            <h4 data-i18n="contact_lbl_social" class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Follow Our Channels</h4>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <!-- Facebook Link -->
+              <a href="https://www.facebook.com/profile.php?id=61559701934787" target="_blank" data-i18n="contact_lbl_fb" class="px-5 py-3 border border-white/5 bg-zinc-900 rounded text-xs text-gray-300 hover:text-gold hover:border-gold/30 transition-all duration-300 flex items-center gap-2">
+                Finger Gems Facebook
+              </a>
+              <!-- Instagram Link -->
+              <a href="https://www.instagram.com/finger_gems?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" data-i18n="contact_lbl_ig" class="px-5 py-3 border border-white/5 bg-zinc-900 rounded text-xs text-gray-300 hover:text-gold hover:border-gold/30 transition-all duration-300 flex items-center gap-2">
+                finger_gems Instagram
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Inquiry Form (7 cols) -->
+        <div class="lg:col-span-7 reveal glass-card p-10 rounded-lg border border-gold/15">
+          <h3 data-i18n="contact_form_title" class="text-2xl font-serif text-white mb-2">Send An Inquiry</h3>
+          <p data-i18n="contact_form_desc" class="text-xs text-gray-400 font-light mb-8">
+            Fill out the details below. Our contact script compiles and routes your message directly to our WhatsApp support team.
+          </p>
+
+          <form id="custom-contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Full Name -->
+              <div>
+                <label for="form-name" data-i18n="contact_form_name_lbl" class="block text-[10px] uppercase tracking-wider text-gray-400 mb-2 font-medium">Your Name *</label>
+                <input type="text" id="form-name" required data-i18n-placeholder="contact_form_name_placeholder" class="w-full bg-zinc-900 border border-white/10 rounded px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-gold transition-colors" placeholder="e.g. John Doe">
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="form-email" data-i18n="contact_form_email_lbl" class="block text-[10px] uppercase tracking-wider text-gray-400 mb-2 font-medium">Your Email *</label>
+                <input type="email" id="form-email" required data-i18n-placeholder="contact_form_email_placeholder" class="w-full bg-zinc-900 border border-white/10 rounded px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-gold transition-colors" placeholder="e.g. john@example.com">
+              </div>
+            </div>
+
+            <!-- Subject -->
+            <div>
+              <label for="form-subject" data-i18n="contact_form_sub_lbl" class="block text-[10px] uppercase tracking-wider text-gray-400 mb-2 font-medium">Subject *</label>
+              <input type="text" id="form-subject" required data-i18n-placeholder="contact_form_sub_placeholder" class="w-full bg-zinc-900 border border-white/10 rounded px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-gold transition-colors" placeholder="e.g. Inquiring about unheated sapphire price range">
+            </div>
+
+            <!-- Message details -->
+            <div>
+              <label for="form-message" data-i18n="contact_form_msg_lbl" class="block text-[10px] uppercase tracking-wider text-gray-400 mb-2 font-medium">Message *</label>
+              <textarea id="form-message" rows="5" required data-i18n-placeholder="contact_form_msg_placeholder" class="w-full bg-zinc-900 border border-white/10 rounded px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-gold transition-colors" placeholder="Write your message detail here..."></textarea>
+            </div>
+
+            <button type="submit" data-i18n="contact_form_submit" class="w-full py-4 bg-gold-gradient text-black font-bold text-xs tracking-widest uppercase rounded btn-gold transition-all duration-300 flex items-center justify-center gap-2">
+              Send Message on WhatsApp
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sri Lankan Map Visual Layout -->
+  <section class="py-16 bg-luxuryDark border-t border-white/[0.03]">
+    <div class="max-w-7xl mx-auto px-6 text-center reveal">
+      <span data-i18n="contact_map_tag" class="text-xs tracking-[0.4em] text-gold uppercase mb-3 block font-medium">Location Map</span>
+      <h3 data-i18n="contact_map_title" class="text-2xl font-serif text-white mb-6">Galle Fort Showroom - Finger Gems</h3>
+      <p data-i18n="contact_map_desc" class="max-w-xl mx-auto text-xs text-gray-500 font-light mb-12">
+        Our showroom is located inside the historic Galle Fort, a UNESCO World Heritage Site in Galle, Sri Lanka. Sourced from the rich mines of Ratnapura, our gems are showcased in our flagship store on Light House Street.
+      </p>
+      
+      <!-- Stylized Vector Map representation -->
+      <div class="max-w-3xl mx-auto rounded-lg border border-gold/15 bg-zinc-950 p-12 flex flex-col justify-center items-center relative overflow-hidden min-h-[300px]">
+        <div class="absolute inset-0 bg-radial-gradient from-gold/5 via-transparent to-transparent z-0"></div>
+        <div class="relative z-10 flex flex-col items-center">
+          <span class="text-5xl text-gold mb-6 animate-pulse"><i class="fa-solid fa-earth-asia"></i></span>
+          <h4 data-i18n="contact_map_hq" class="text-lg font-serif text-white font-medium mb-2">Finger Gems & Jewelry HQ</h4>
+          <p data-i18n="footer_address" class="text-xs text-gray-400 mb-2">62/B Light House Street, Galle Fort, Galle</p>
+          <p data-i18n="contact_map_coords" class="text-[10px] text-gray-600 max-w-sm mb-6">Geographic coordinates: 6.0264° N, 80.2178° E</p>
+          <a href="https://wa.me/94770615088" target="_blank" data-i18n="contact_map_btn" class="px-6 py-2.5 border border-gold/30 hover:border-gold text-gold-light hover:bg-gold/5 text-[10px] tracking-widest uppercase rounded font-bold transition-all duration-300">
+            Open Chat Direction
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-luxuryDark pt-20 pb-8 border-t border-white/[0.03] font-medium">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <!-- Branding Info -->
+        <div class="space-y-6">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <img src="assets/logo.jpg" alt="Finger Gems Logo" class="h-12 w-12 object-contain rounded-full border border-gold/30 group-hover:border-gold transition-all duration-300">
+            <div class="flex flex-col">
+              <span class="text-base font-semibold tracking-[0.25em] text-white uppercase font-serif">Finger Gems</span>
+              <span data-i18n="nav_tagline" class="text-[10px] tracking-[0.4em] text-gold-light uppercase">& Jewelry</span>
+            </div>
+          </a>
+          <p data-i18n="footer_desc" class="text-xs text-gray-500 font-light leading-relaxed">
+            Authentic natural Ceylon gemstones and bespoke jewelry hand-fabricated by third-generation Sri Lankan artisans.
+          </p>
+          <!-- Social Icons -->
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/profile.php?id=61559701934787" target="_blank" class="w-9 h-9 bg-zinc-900 border border-white/5 text-gray-400 hover:text-gold hover:border-gold/30 flex items-center justify-center rounded-full transition-all duration-300" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://www.instagram.com/finger_gems?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="w-9 h-9 bg-zinc-900 border border-white/5 text-gray-400 hover:text-gold hover:border-gold/30 flex items-center justify-center rounded-full transition-all duration-300" aria-label="Instagram">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://wa.me/94770615088" target="_blank" class="w-9 h-9 bg-zinc-900 border border-white/5 text-gray-400 hover:text-gold hover:border-gold/30 flex items-center justify-center rounded-full transition-all duration-300" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-6">
+          <h4 data-i18n="footer_col1_title" class="text-sm font-semibold tracking-wider text-white uppercase font-serif border-l-2 border-gold pl-3">Navigation</h4>
+          <ul class="space-y-3 text-xs text-gray-500">
+            <li><a href="index.html" data-i18n="nav_home" class="hover:text-gold transition-colors duration-300">Home</a></li>
+            <li><a href="gems.html" data-i18n="nav_gems" class="hover:text-gold transition-colors duration-300">Gems Catalog</a></li>
+            <li><a href="jewelry.html" data-i18n="nav_jewelry" class="hover:text-gold transition-colors duration-300">Bespoke Jewelry</a></li>
+            <li><a href="about.html" data-i18n="nav_heritage" class="hover:text-gold transition-colors duration-300">Ceylon Heritage</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact" class="hover:text-gold transition-colors duration-300">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Gem Categories -->
+        <div class="space-y-6">
+          <h4 data-i18n="footer_col2_title" class="text-sm font-semibold tracking-wider text-white uppercase font-serif border-l-2 border-gold pl-3">Popular Stones</h4>
+          <ul class="space-y-3 text-xs text-gray-500 font-medium">
+            <li><a href="gems.html" data-i18n="footer_popular_stone1" class="hover:text-gold transition-colors duration-300">Royal Blue Sapphire</a></li>
+            <li><a href="gems.html" data-i18n="footer_popular_stone2" class="hover:text-gold transition-colors duration-300">Golden Yellow Sapphire</a></li>
+            <li><a href="gems.html" data-i18n="footer_popular_stone3" class="hover:text-gold transition-colors duration-300">Pigeon Blood Ruby</a></li>
+            <li><a href="gems.html" data-i18n="footer_popular_stone4" class="hover:text-gold transition-colors duration-300">Pink & Padparadscha</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Footer Column -->
+        <div class="space-y-6">
+          <h4 data-i18n="footer_col3_title" class="text-sm font-semibold tracking-wider text-white uppercase font-serif border-l-2 border-gold pl-3">Get in touch</h4>
+          <ul class="space-y-4 text-xs text-gray-500 font-light">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-gold text-sm mt-0.5"></i>
+              <div class="flex flex-col font-medium">
+                <a href="tel:+94770615088" class="hover:text-gold transition-colors duration-300">+94 770615088</a>
+                <a href="tel:+94766640401" class="hover:text-gold transition-colors duration-300">+94 766640401</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-gold text-sm"></i>
+              <a href="mailto:fingergems@163.com" class="hover:text-gold transition-colors duration-300 font-serif font-medium">fingergems@163.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-gold text-sm mt-0.5 shrink-0"></i>
+              <span data-i18n="footer_address">62/B Light House Street, Galle Fort, Galle</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="h-[1px] w-full bg-white/5 mb-8"></div>
+
+      <!-- Copyright info -->
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center text-[10px] text-gray-600 font-light">
+        <p data-i18n="footer_copyright">&copy; 2026 Finger Gems & Jewelry. All Rights Reserved.</p>
+        <p data-i18n="footer_tagline">Providing Natural Gems Direct from Sri Lanka</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

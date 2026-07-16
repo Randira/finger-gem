@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceylon Heritage & Story | Finger Gems & Jewelry</title>
+  <meta name="description" content="Learn about Sri Lankan gem history, Ceylon sapphires, and our commitment to ethical sourcing and NGJA certified natural gemstones at Finger Gems & Jewelry.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#d4af37',
+              dark: '#b8932c',
+              light: '#f3e5ab',
+            },
+            luxury: '#0a0a0b',
+            luxuryDark: '#050506',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-luxury text-gray-200">
+
+  <!-- Top Announcement Bar -->
+  <div data-i18n="top_announcement" class="bg-gradient-to-r from-zinc-950 via-gold-dark/20 to-zinc-950 text-center py-2 px-4 border-b border-gold/10 text-xs tracking-wider text-gold-light">
+    AUTHENTIC NATURAL CEYLON GEMSTONES - WORLDWIDE INSURED SHIPPING & CERTIFICATION
+  </div>
+
+  <!-- Header / Navigation -->
+  <header id="main-header" class="fixed top-10 left-0 w-full z-40 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/logo.jpg" alt="Finger Gems Logo" class="h-10 w-10 object-contain rounded-full border border-gold/30 group-hover:border-gold transition-all duration-300">
+        <div class="flex flex-col">
+          <span class="text-sm font-semibold tracking-[0.25em] text-white uppercase font-serif">Finger Gems</span>
+          <span data-i18n="nav_tagline" class="text-[9px] tracking-[0.4em] text-gold-light uppercase">& Jewelry</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs tracking-widest uppercase font-medium">
+        <a href="index.html" data-i18n="nav_home" class="text-gray-400 hover:text-gold transition-all duration-300">Home</a>
+        <a href="gems.html" data-i18n="nav_gems" class="text-gray-400 hover:text-gold transition-all duration-300">Gems Catalog</a>
+        <a href="jewelry.html" data-i18n="nav_jewelry" class="text-gray-400 hover:text-gold transition-all duration-300">Bespoke Jewelry</a>
+        <a href="about.html" data-i18n="nav_heritage" class="text-gold transition-all duration-300 hover:text-white relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-gold">Ceylon Heritage</a>
+        <a href="mining.html" data-i18n="nav_mining" class="text-gray-400 hover:text-gold transition-all duration-300">Gem Mining</a>
+        <a href="contact.html" data-i18n="nav_contact" class="text-gray-400 hover:text-gold transition-all duration-300">Contact Us</a>
+      </nav>
+
+      <!-- Desktop Contact/Inquire CTA & Language Switcher -->
+      <div class="hidden md:flex items-center gap-6">
+        <!-- Language Switcher -->
+        <div class="flex items-center gap-2.5 text-xs tracking-widest uppercase font-semibold border-r border-white/10 pr-6">
+          <button data-lang="en" class="lang-select-btn text-gold font-bold hover:text-white transition-all duration-300">EN</button>
+          <span class="text-white/20">|</span>
+          <button data-lang="zh" class="lang-select-btn text-gray-400 hover:text-white transition-all duration-300">中文</button>
+        </div>
+        
+        <a href="https://wa.me/94770615088" target="_blank" data-i18n="nav_inquire_btn" class="px-5 py-2.5 bg-gold-gradient text-black font-semibold text-xs tracking-widest uppercase rounded hover:bg-gold-gradient-hover transition-all duration-300 btn-gold shadow-lg shadow-gold/10">
+          WhatsApp Us
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-white hover:text-gold transition-all duration-300" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-50 flex flex-col justify-center items-center hidden">
+    <button id="close-menu" class="absolute top-8 right-6 text-white hover:text-gold text-2xl" onclick="document.getElementById('mobile-menu').classList.add('hidden'); document.body.classList.remove('overflow-hidden');">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img src="assets/logo.jpg" alt="Finger Gems Logo" class="h-16 w-16 object-contain rounded-full border border-gold/30 mb-8">
+    <nav class="flex flex-col gap-6 text-center text-lg tracking-widest uppercase mb-8">
+      <a href="index.html" data-i18n="nav_home" class="text-gray-300 hover:text-gold">Home</a>
+      <a href="gems.html" data-i18n="nav_gems" class="text-gray-300 hover:text-gold">Gems Catalog</a>
+      <a href="jewelry.html" data-i18n="nav_jewelry" class="text-gray-300 hover:text-gold">Bespoke Jewelry</a>
+      <a href="about.html" data-i18n="nav_heritage" class="text-gold">Ceylon Heritage</a>
+      <a href="mining.html" data-i18n="nav_mining" class="text-gray-300 hover:text-gold">Gem Mining</a>
+      <a href="contact.html" data-i18n="nav_contact" class="text-gray-300 hover:text-gold">Contact Us</a>
+    </nav>
+    
+    <!-- Mobile Language Selector -->
+    <div class="flex items-center gap-4 text-xs tracking-widest uppercase font-semibold border-t border-white/10 pt-6 mb-8 w-40 justify-center">
+      <button data-lang="en" class="lang-select-btn text-gold font-bold hover:text-white transition-all duration-300">English</button>
+      <span class="text-white/20">|</span>
+      <button data-lang="zh" class="lang-select-btn text-gray-400 hover:text-white transition-all duration-300">中文</button>
+    </div>
+
+    <a href="https://wa.me/94770615088" target="_blank" data-i18n="nav_inquire_btn" class="px-8 py-3.5 bg-gold-gradient text-black font-semibold text-sm tracking-widest uppercase rounded btn-gold">
+      WhatsApp Us
+    </a>
+  </div>
+
+  <!-- Page Banner -->
+  <section class="relative pt-44 pb-20 bg-luxuryDark overflow-hidden border-b border-white/[0.03]">
+    <div class="absolute left-0 bottom-0 w-80 h-80 bg-gold/5 rounded-full filter blur-[80px]"></div>
+    <div class="relative max-w-7xl mx-auto px-6 text-center reveal">
+      <span data-i18n="about_header_tag" class="text-xs tracking-[0.4em] text-gold uppercase mb-3 block font-medium">Island of Gems</span>
+      <h1 data-i18n="about_header_title" class="text-4xl md:text-6xl font-serif text-white mb-6">Ceylon Gem Heritage</h1>
+      <div class="h-[1px] w-20 bg-gold mx-auto mb-6"></div>
+      <p data-i18n="about_header_desc" class="max-w-xl mx-auto text-gray-400 font-light text-xs md:text-sm leading-relaxed">
+        Sourcing finest sapphires and diamonds from Sri Lanka with legacy commitment, ethical craftsmanship, and certified authenticity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sri Lankan Gem Legend Content -->
+  <section class="py-24 bg-luxury relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Text details -->
+        <div class="reveal">
+          <span data-i18n="about_legend_tag" class="text-xs tracking-[0.4em] text-gold uppercase mb-3 block font-medium">A Rich History</span>
+          <h2 data-i18n="about_legend_title" class="text-3xl md:text-4xl font-serif text-white font-normal mb-8 leading-tight">
+            Why Ceylon Sapphires <br>Are Coveted Worldwide
+          </h2>
+          <p data-i18n="about_legend_p1" class="text-xs md:text-sm text-gray-400 font-light leading-relaxed mb-6">
+            Sri Lanka (formerly known as Ceylon) boasts some of the most saturated and structurally perfect gemstone veins on earth. Unlike other regions where stones require chemical treatments or extreme heat diffusion to display color, Ceylon Sapphires are renowned for their natural rich saturation, high clarity, and fiery brilliance in their native unheated states.
+          </p>
+          <p data-i18n="about_legend_p2" class="text-xs md:text-sm text-gray-400 font-light leading-relaxed mb-6">
+            Historically, Ceylon Sapphires have adorned the royal crowns and jewelry of monarchs worldwide. From the ancient Roman emperors to the famous royal engagement ring of Princess Diana (featuring a 12-carat Ceylon Blue Sapphire), these gems represent the absolute pinnacle of luxury and investment-grade value.
+          </p>
+          <div data-i18n="about_legend_quote" class="border-l-2 border-gold pl-6 py-2 my-8 italic text-xs md:text-sm text-gold-light bg-gold/5 rounded-r">
+            "Sri Lankan gemstones are defined by their unique crystal shape, light refraction properties, and historical value. Sourcing unheated Ceylon stones is the ultimate goal of gem collectors."
+          </div>
+        </div>
+
+        <!-- Visual representation with layout cards -->
+        <div class="grid grid-cols-2 gap-6 reveal">
+          <div class="glass-card p-8 rounded-lg border border-white/5 space-y-4">
+            <div class="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center rounded-full text-base">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h3 data-i18n="about_value1_title" class="text-base font-serif text-white">Unheated Quality</h3>
+            <p data-i18n="about_value1_desc" class="text-[11px] text-gray-500 font-light leading-relaxed">
+              We specialize in unheated sapphires, keeping the gemstone's structural molecular purity exactly as it crystallized in the earth.
+            </p>
+          </div>
+
+          <div class="glass-card p-8 rounded-lg border border-white/5 space-y-4 pt-12">
+            <div class="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center rounded-full text-base">
+              <i class="fa-solid fa-file-shield"></i>
+            </div>
+            <h3 data-i18n="about_value2_title" class="text-base font-serif text-white">NGJA Sourced</h3>
+            <p data-i18n="about_value2_desc" class="text-[11px] text-gray-500 font-light leading-relaxed">
+              We source directly from regulated mining co-operatives and secure official laboratory certificates (like NGJA or GIC) for every transaction.
+            </p>
+          </div>
+
+          <div class="glass-card p-8 rounded-lg border border-white/5 space-y-4">
+            <div class="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center rounded-full text-base">
+              <i class="fa-solid fa-hammer"></i>
+            </div>
+            <h3 data-i18n="about_value3_title" class="text-base font-serif text-white">Legacy Lapidary</h3>
+            <p data-i18n="about_value3_desc" class="text-[11px] text-gray-500 font-light leading-relaxed">
+              Each stone is hand-faceted by local cutters who have inherited the precise geometric splitting and polishing techniques through generations.
+            </p>
+          </div>
+
+          <div class="glass-card p-8 rounded-lg border border-white/5 space-y-4 pt-12">
+            <div class="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center rounded-full text-base">
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <h3 data-i18n="about_value4_title" class="text-base font-serif text-white">Ethical Mining</h3>
+            <p data-i18n="about_value4_desc" class="text-[11px] text-gray-500 font-light leading-relaxed">
+              Our operations support environmentally sustainable traditional shaft mining, ensuring minimal damage to fields and supporting fair local wages.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sourcing Commitment Section -->
+  <section class="py-24 bg-luxuryDark border-t border-b border-white/[0.03]">
+    <div class="max-w-4xl mx-auto px-6 text-center reveal">
+      <span data-i18n="about_story_tag" class="text-xs tracking-[0.4em] text-gold uppercase mb-3 block font-medium">Our Story</span>
+      <h2 data-i18n="about_story_title" class="text-3xl font-serif text-white mb-6">About Finger Gems & Jewelry</h2>
+      <p data-i18n="about_story_p1" class="text-xs md:text-sm text-gray-400 font-light leading-relaxed mb-6">
+        Finger Gems & Jewelry was established with a singular mission: to bring the breathtaking natural beauty of Sri Lankan gemstones directly to international clients. Sourced directly from our family networks and licensed mines in Ratnapura (the historic "City of Gems"), we curate loose collector-grade gemstones and manufacture bespoke fine jewelry.
+      </p>
+      <p data-i18n="about_story_p2" class="text-xs md:text-sm text-gray-400 font-light leading-relaxed mb-10">
+        By connecting online directly with buyers, we bypass intermediate wholesale layers. This enables us to provide absolute transparency, direct mine-to-hand pricing, and fully custom jewelry customization. We stand behind the authenticity of every single crystal we represent.
+      </p>
+      <div class="grid grid-cols-3 gap-6 max-w-xl mx-auto border-t border-white/5 pt-10">
+        <div>
+          <span class="text-2xl font-serif text-gold block mb-1">100%</span>
+          <span data-i18n="about_story_stat1_desc" class="text-[9px] uppercase tracking-wider text-gray-500 font-semibold">Natural Gems</span>
+        </div>
+        <div>
+          <span class="text-2xl font-serif text-gold block mb-1">Direct</span>
+          <span data-i18n="about_story_stat2_desc" class="text-[9px] uppercase tracking-wider text-gray-500 font-semibold font-serif">Mine Sourcing</span>
+        </div>
+        <div>
+          <span class="text-2xl font-serif text-gold block mb-1">Global</span>
+          <span data-i18n="about_story_stat3_desc" class="text-[9px] uppercase tracking-wider text-gray-500 font-semibold font-serif">Insured Delivery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-20 bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border-b border-gold/10 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6 text-center reveal">
+      <h2 data-i18n="about_story_cta_title" class="text-2xl md:text-4xl font-serif text-white font-normal mb-6">Want to check our gemstone certifications?</h2>
+      <p data-i18n="about_story_cta_desc" class="max-w-xl mx-auto text-gray-400 font-light text-xs md:text-sm mb-10 leading-relaxed">
+        We can walk you through the details of NGJA certification, heat treatment analysis, and carat validation reports. Reach out to ask questions.
+      </p>
+      <a href="https://wa.me/94770615088" target="_blank" data-i18n="about_story_cta_btn" class="inline-flex items-center gap-3 px-8 py-4 bg-gold-gradient text-black font-bold text-xs tracking-widest uppercase rounded hover:shadow-2xl hover:shadow-gold/30 transition-all duration-300 btn-gold">
+        Consult Gemologist on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-luxuryDark pt-20 pb-8 font-medium">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <!-- Branding Info -->
+        <div class="space-y-6">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <img src="assets/logo.jpg" alt="Finger Gems Logo" class="h-12 w-12 object-contain rounded-full border border-gold/30 group-hover:border-gold transition-all duration-300">
+            <div class="flex flex-col">
+              <span class="text-base font-semibold tracking-[0.25em] text-white uppercase font-serif">Finger Gems</span>
+              <span data-i18n="nav_tagline" class="text-[10px] tracking-[0.4em] text-gold-light uppercase">& Jewelry</span>
+            </div>
+          </a>
+          <p data-i18n="footer_desc" class="text-xs text-gray-500 font-light leading-relaxed">
+            Authentic natural Ceylon gemstones and bespoke jewelry hand-fabricated by third-generation Sri Lankan artisans.
+          </p>
+          <!-- Social Icons -->
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/profile.php?id=61559701934787" target="_blank" class="w-9 h-9 bg-zinc-900 border border-white/5 text-gray-400 hover:text-gold hover:border-gold/30 flex items-center justify-center rounded-full transition-all duration-300" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://www.instagram.com/finger_gems?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="w-9 h-9 bg-zinc-900 border border-white/5 text-gray-400 hover:text-gold hover:border-gold/30 flex items-center justify-center rounded-full transition-all duration-300" aria-label="Instagram">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://wa.me/94770615088" target="_blank" class="w-9 h-9 bg-zinc-900 border border-white/5 text-gray-400 hover:text-gold hover:border-gold/30 flex items-center justify-center rounded-full transition-all duration-300" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-6">
+          <h4 data-i18n="footer_col1_title" class="text-sm font-semibold tracking-wider text-white uppercase font-serif border-l-2 border-gold pl-3">Navigation</h4>
+          <ul class="space-y-3 text-xs text-gray-500">
+            <li><a href="index.html" data-i18n="nav_home" class="hover:text-gold transition-colors duration-300">Home</a></li>
+            <li><a href="gems.html" data-i18n="nav_gems" class="hover:text-gold transition-colors duration-300">Gems Catalog</a></li>
+            <li><a href="jewelry.html" data-i18n="nav_jewelry" class="hover:text-gold transition-colors duration-300">Bespoke Jewelry</a></li>
+            <li><a href="about.html" data-i18n="nav_heritage" class="hover:text-gold transition-colors duration-300">Ceylon Heritage</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact" class="hover:text-gold transition-colors duration-300">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Gem Categories -->
+        <div class="space-y-6">
+          <h4 data-i18n="footer_col2_title" class="text-sm font-semibold tracking-wider text-white uppercase font-serif border-l-2 border-gold pl-3">Popular Stones</h4>
+          <ul class="space-y-3 text-xs text-gray-500 font-medium">
+            <li><a href="gems.html" data-i18n="footer_popular_stone1" class="hover:text-gold transition-colors duration-300">Royal Blue Sapphire</a></li>
+            <li><a href="gems.html" data-i18n="footer_popular_stone2" class="hover:text-gold transition-colors duration-300">Golden Yellow Sapphire</a></li>
+            <li><a href="gems.html" data-i18n="footer_popular_stone3" class="hover:text-gold transition-colors duration-300">Pigeon Blood Ruby</a></li>
+            <li><a href="gems.html" data-i18n="footer_popular_stone4" class="hover:text-gold transition-colors duration-300">Pink & Padparadscha</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Footer Column -->
+        <div class="space-y-6">
+          <h4 data-i18n="footer_col3_title" class="text-sm font-semibold tracking-wider text-white uppercase font-serif border-l-2 border-gold pl-3">Get in touch</h4>
+          <ul class="space-y-4 text-xs text-gray-500 font-light">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-gold text-sm mt-0.5"></i>
+              <div class="flex flex-col font-medium">
+                <a href="tel:+94770615088" class="hover:text-gold transition-colors duration-300">+94 770615088</a>
+                <a href="tel:+94766640401" class="hover:text-gold transition-colors duration-300">+94 766640401</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-gold text-sm"></i>
+              <a href="mailto:fingergems@163.com" class="hover:text-gold transition-colors duration-300 font-serif font-medium">fingergems@163.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-gold text-sm mt-0.5 shrink-0"></i>
+              <span data-i18n="footer_address">62/B Light House Street, Galle Fort, Galle</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="h-[1px] w-full bg-white/5 mb-8"></div>
+
+      <!-- Copyright info -->
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center text-[10px] text-gray-600 font-light">
+        <p data-i18n="footer_copyright">&copy; 2026 Finger Gems & Jewelry. All Rights Reserved.</p>
+        <p data-i18n="footer_tagline">Providing Natural Gems Direct from Sri Lanka</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
